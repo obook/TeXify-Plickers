@@ -1,5 +1,5 @@
 # TeXify-Plickers
-<img src="LOGO.png" width="48"> GreaseMonkey user script for add LaTeX code in Plickers website. The library used is [MathJax](https://www.mathjax.org/).
+<img src="LOGO.png" width="48"> GreaseMonkey user script for add LaTeX code in Plickers website. The library used is [MathJax](https://www.mathjax.org/). This plugin is not an formulas editor, Latex language must be known.
 
 ### Installation
 
@@ -9,7 +9,7 @@
 
 <img src="TeXify-Plickers.png" width="230">
 
-Sample code :
+Sample question :
 ```
 2) Demo TeXify plugin. 
 In physics, the mass-energy equivalence is stated by the equation [; E=mc^2 ;], discovered in 1905 by Albert Einstein. Depending on the value of  [; x ;] the equation  [;  f(x) = \sum_{i=0}^{n} \frac{a_i}{1+x} ;] may diverge or converge.
