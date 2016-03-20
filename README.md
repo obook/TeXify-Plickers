@@ -8,3 +8,14 @@
 * 3) use delimiters [; and ;] in questions for create code LaTeX.
 
 <img src="TeXify-Plickers.png" width="230">
+
+Sample code :
+```
+2) Demo TeXify plugin. 
+In physics, the mass-energy equivalence is stated by the equation [; E=mc^2 ;], discovered in 1905 by Albert Einstein. Depending on the value of  [; x ;] the equation  [;  f(x) = \sum_{i=0}^{n} \frac{a_i}{1+x} ;] may diverge or converge.
+
+A: Integral [;  \int_{a}^{b} x^2 dx ;] inside text.
+B: Sum [; \sum_{n=1}^{\infty} 2^{-n} = 1 ;] inside text
+C: [;  \lim_{h \rightarrow 0 } \frac{f(x+h)-f(x)}{h}  ;]  inside text
+D: Limit [; \lim_{x\to\infty} f(x) ;] inside text
+```
