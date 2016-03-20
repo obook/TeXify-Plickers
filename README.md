@@ -1,5 +1,5 @@
 # TeXify-Plickers
-<img src="LOGO.png" width="48"> GreaseMonkey user script for add LaTeX code in Plickers website. The library used is [MathJax](https://www.mathjax.org/). This plugin is not an formulas editor, Latex language must be known.
+<img src="LOGO.png" width="48"> GreaseMonkey user script for add LaTeX code in Plickers website. This plugin is not an formulas editor, Latex language must be known. The library used : [MathJax](https://www.mathjax.org/).
 
 ### Installation
 
