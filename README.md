@@ -19,7 +19,7 @@ C: [;  \lim_{h \rightarrow 0 } \frac{f(x+h)-f(x)}{h}  ;]  inside text
 D: Limit [; \lim_{x\to\infty} f(x) ;] inside text
 ```
 
-### Live view Result
+### Live view result
 
 <img src="TeXify-Plickers.png" width="324">
 
