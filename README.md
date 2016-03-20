@@ -20,5 +20,5 @@ D: roots [; x_{1,2} = \frac{- b \pm \sqrt{\Delta}}{2a} ;] inside text
 
 ### Live view result
 
-<img src="sample.png" width="324">
+<img src="sample.png" width="328">
 
