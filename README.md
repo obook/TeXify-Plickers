@@ -21,5 +21,5 @@ D: Limit [; \lim_{x\to\infty} f(x) ;] inside text
 
 ### Result
 
-<img src="TeXify-Plickers.png" width="230">
+<img src="TeXify-Plickers.png" width="324">
 
