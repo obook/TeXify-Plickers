@@ -7,7 +7,7 @@
 * 2) install [TeXify-Plickers user script](https://github.com/obook/TeXify-Plickers/raw/master/TeXify-Plickers.user.js);
 * 3) Create questions and use delimiters [; and ;] for insert LaTeX code.
 
-### Sample question
+### Sample
 
 ```
 In physics, the mass-energy equivalence is stated by the equation [; E=mc^2 ;], discovered in 1905 by Albert Einstein. Depending on the value of  [; x ;] the equation  [;  f(x) = \sum_{i=0}^{n} \frac{a_i}{1+x} ;] may diverge or converge.
