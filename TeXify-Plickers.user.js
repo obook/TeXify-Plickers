@@ -1,14 +1,15 @@
 // ==UserScript==
-// @name        TeXify-Plickers
-// @namespace   https://github.com/obook/TeXify-Plickers
-// @version     3
-// @description GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
-// @author         obooklage
-// @include        https://plickers.com/*
-// @downloadURL    https://github.com/obook/TeXify-Plickers/
-// @updateURL      https://github.com/obook/TeXify-Plickers/raw/master/TeXify-Plickers.user.js
-// @icon           https://github.com/obook/TeXify-Plickers/raw/master/icon.png
-// @run-at document-end
+// @name	TeXify-Plickers
+// @namespace	https://github.com/obook/TeXify-Plickers
+// @version	4
+// @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
+// @author	obooklage
+// @grant	none
+// @include	https://plickers.com/*
+// @downloadURL	https://github.com/obook/TeXify-Plickers/
+// @updateURL	https://github.com/obook/TeXify-Plickers/raw/master/TeXify-Plickers.user.js
+// @icon	https://github.com/obook/TeXify-Plickers/raw/master/icon.png
+// @run-at	document-end
 // ==/UserScript==
 
 var mathjaxloaded = false;
