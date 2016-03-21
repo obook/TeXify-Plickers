@@ -1,9 +1,9 @@
 # TeXify-Plickers
-<img src="LOGO.png" width="48"> This GreaseMonkey user script allows you to include mathematics in [Plickers](https://plickers.com) questions. Is not a formula editor, LaTeX language must be known. Library used : the JavaScript display engine [MathJax](https://www.mathjax.org/).
+<img src="LOGO.png" width="48"> This script allows you to include mathematics in [Plickers](https://plickers.com) questions. Is not a formula editor, LaTeX language must be known. Library used : the JavaScript display engine [MathJax](https://www.mathjax.org/).
 
 ### Installation and usage
 
-* 1) install [GreaseMonkey extension for FireFox](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/);
+* 1) install [GreaseMonkey extension for FireFox](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/) or [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/);
 * 2) install [TeXify-Plickers user script](https://github.com/obook/TeXify-Plickers/raw/master/TeXify-Plickers.user.js);
 * 3) Create questions and use delimiters [; and ;] for insert LaTeX code.
 
