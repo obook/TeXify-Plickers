@@ -22,3 +22,15 @@ D: roots [; x_{1,2} = \frac{- b \pm \sqrt{\Delta}}{2a} ;]
 
 <img src="sample.png" width="328">
 
+### Known Bugs
+
+Under tampermonkey for Dolphin (Android), the @include directive is buggy. You must change the script line
+
+```
+// @include	https://plickers.com/*
+```
+to
+
+```
+// @include	*
+```
