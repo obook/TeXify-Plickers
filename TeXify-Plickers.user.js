@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	TeXify-Plickers
 // @namespace	https://github.com/obook/TeXify-Plickers
-// @version	4
+// @version	5
 // @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
 // @author	obooklage
 // @grant	none
@@ -24,11 +24,15 @@ function OnLoadMathJax()
 
 function TeXifyPlickers() {
     var startTime = new Date();
-    console.log('TeXify-Plickers MathJax rescan ' + startTime.toLocaleTimeString());
     if( mathjaxloaded === true)
     {
-    	MathJax.Hub.Typeset();
-    } 
+        console.log('TeXify-Plickers MathJax rescan ' + startTime.toLocaleTimeString());
+        MathJax.Hub.Typeset();
+    }
+    else
+    {
+        console.log('TeXify-Plickers error MathJax not loaded ' + startTime.toLocaleTimeString());
+    }
 }
 
 /* Application */
