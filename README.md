@@ -35,4 +35,4 @@ to
 // @include	*
 ```
 
-* During vote, equations are redrawed.
+* During vote, answers may be redrawed.
