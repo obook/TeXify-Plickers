@@ -24,7 +24,7 @@ D: roots [; x_{1,2} = \frac{- b \pm \sqrt{\Delta}}{2a} ;]
 
 ### Known Bugs
 
-* Under tampermonkey for Dolphin (Android), the @include directive is buggy. You must change the script line
+#### Under tampermonkey for Dolphin (Android), the @include directive is buggy. You must change the script line
 
 ```
 // @include	https://plickers.com/*
@@ -35,4 +35,10 @@ to
 // @include	*
 ```
 
-* During vote, answers may be redrawed.
+#### Unwanted redraws
+During vote scanning, junk drawings on choices.
+(current debugging).
+
+
+
+
