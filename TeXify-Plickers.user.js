@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	TeXify-Plickers
 // @namespace	https://github.com/obook/TeXify-Plickers
-// @version	5
+// @version	6
 // @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
 // @author	obooklage
 // @grant	none
@@ -45,5 +45,5 @@ if (self == top) { /* run only in the top frame. we do our own frame parsing */
     script.src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     script.onload = OnLoadMathJax;
     document.head.appendChild(script);
-    setInterval(TeXifyPlickers, 5000);
+    setInterval(TeXifyPlickers, 4000);
 }
