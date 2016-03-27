@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	TeXify-Plickers
 // @namespace	https://github.com/obook/TeXify-Plickers
-// @version	7
+// @version	8
 // @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
 // @author	obooklage
 // @grant	none
@@ -26,6 +26,57 @@ function TeXifyPlickers() {
     var startTime = new Date();
     if( mathjaxloaded === true)
     {
+        
+        /* choices block */
+        
+        var choices_block_array = document.getElementsByClassName('choices-container animate-transition ng-isolate-scope');
+        if( choices_block_array.length > 0 )
+        {
+            
+            /* Get question */
+            var question_array  = document.getElementsByClassName('question-body ng-binding ng-isolate-scope');
+            var question  = question_array[0].innerText;   /* DANGER can be null */ 
+            
+            /* Is the question content the special paragraph ? */
+            var special_paragraph = document.getElementById("ptexified");
+            
+            /* special_paragraph present */
+            if( special_paragraph )
+            {
+                console.log('SAME QUESTION');
+            }
+            else
+            {
+                console.log('NEW QUESTION');
+                
+                /* choices presents, hide */
+                choices_block_array[0].style.visibility = "hidden";
+                choices_block_array[0].setAttribute('data-texified', true);
+                
+                /* new paragraph */
+                var paragraph = document.createElement("p");
+                paragraph.id = "ptexified";
+                var hr = document.createElement('hr');
+                paragraph.appendChild(hr); 
+                
+                /* Get choices */
+                
+                var choices_array  = document.getElementsByClassName('padding-top ng-binding ng-scope');
+                for(i=0;i<choices_array.length;i++)
+                {
+                    var choice  = choices_array[i].innerHTML;
+                    var iDiv = document.createElement('div');
+                    iDiv.id = 'block';
+                    iDiv.className = 'block';
+                    iDiv.innerHTML = choice;
+                    paragraph.appendChild(iDiv); 
+                }
+                
+                /* add paragraph's choices */
+                document.getElementsByClassName('question-body ng-binding ng-isolate-scope')[0].appendChild(paragraph);
+            }
+        }
+        
         console.log('TeXify-Plickers MathJax rescan ' + startTime.toLocaleTimeString());
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
     }
@@ -45,5 +96,5 @@ if (self == top) { /* run only in the top frame. we do our own frame parsing */
     script.src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     script.onload = OnLoadMathJax;
     document.head.appendChild(script);
-    setInterval(TeXifyPlickers, 3000);
+    setInterval(TeXifyPlickers, 1000);
 }
