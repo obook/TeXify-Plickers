@@ -35,9 +35,6 @@ to
 // @include	*
 ```
 
-#### Unwanted redraws
-During vote scanning, junk drawings on choices.
-(current debugging).
 
 
 
