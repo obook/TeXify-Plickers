@@ -44,7 +44,6 @@ function TeXifyPlickers() {
                 
                 /* choices presents, hide */
                 choices_block_array[0].style.visibility = "hidden";
-                choices_block_array[0].setAttribute('data-texified', true);
                 
                 /* new paragraph then hr */
                 var paragraph = document.createElement("p");
