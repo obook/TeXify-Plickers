@@ -88,5 +88,5 @@ if (self == top) { /* run only in the top frame. we do our own frame parsing */
     script.src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     script.onload = OnLoadMathJax;
     document.head.appendChild(script);
-    setInterval(TeXifyPlickers, 1000);
+    setInterval(TeXifyPlickers, 3000);
 }
