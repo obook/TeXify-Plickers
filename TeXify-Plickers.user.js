@@ -26,17 +26,10 @@ function TeXifyPlickers() {
     var startTime = new Date();
     if( mathjaxloaded === true)
     {
-        
         /* choices block */
-        
         var choices_block_array = document.getElementsByClassName('choices-container animate-transition ng-isolate-scope');
         if( choices_block_array.length > 0 )
         {
-            
-            /* Get question */
-            var question_array  = document.getElementsByClassName('question-body ng-binding ng-isolate-scope');
-            var question  = question_array[0].innerText;   /* DANGER can be null */ 
-            
             /* Is the question content the special paragraph ? */
             var special_paragraph = document.getElementById("ptexified");
             
@@ -53,7 +46,7 @@ function TeXifyPlickers() {
                 choices_block_array[0].style.visibility = "hidden";
                 choices_block_array[0].setAttribute('data-texified', true);
                 
-                /* new paragraph */
+                /* new paragraph then hr */
                 var paragraph = document.createElement("p");
                 paragraph.id = "ptexified";
                 var hr = document.createElement('hr');
@@ -72,7 +65,7 @@ function TeXifyPlickers() {
                     paragraph.appendChild(iDiv); 
                 }
                 
-                /* add paragraph's choices */
+                /* add paragraph's choices to question */
                 document.getElementsByClassName('question-body ng-binding ng-isolate-scope')[0].appendChild(paragraph);
             }
         }
