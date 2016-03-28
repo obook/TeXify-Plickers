@@ -83,7 +83,8 @@ function TeXifyPlickers() {
     if( debugtexify === true )
         console.log('TeXify-Plickers MATHJAX RESCAN ' + startTime.toLocaleTimeString());
     
-    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    /* MathJax.Hub.Queue(["Typeset",MathJax.Hub]); */
+    MathJax.Hub.Typeset();
 }
 
 /* Application */
