@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	TeXify-Plickers
 // @namespace	https://github.com/obook/TeXify-Plickers
-// @version	8
+// @version	9
 // @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
 // @author	obooklage
 // @grant	none
@@ -18,63 +18,74 @@ function OnLoadMathJax()
 {
     var startTime = new Date();
 	console.log('TeXify-Plickers MathJax loaded.' + startTime.toLocaleTimeString());
+    
+    MathJax.Hub.Config({
+    showProcessingMessages : false,
+    tex2jax: {
+      inlineMath: [ ['[;',';]'] ],
+      processEscapes: true
+    }
+    });
+    
 	mathjaxloaded = true;
-	MathJax.Hub.Config({tex2jax: {inlineMath: [['[;',';]']]}});
 }
 
 function TeXifyPlickers() {
     var startTime = new Date();
-    if( mathjaxloaded === true)
+    
+    if( mathjaxloaded != true)
     {
-        /* choices block */
-        var choices_block_array = document.getElementsByClassName('choices-container animate-transition ng-isolate-scope');
-        if( choices_block_array.length > 0 )
-        {
-            /* Is the question content the special paragraph ? */
-            var special_paragraph = document.getElementById("ptexified");
-            
-            /* special_paragraph present */
-            if( special_paragraph )
-            {
-                console.log('SAME QUESTION');
-            }
-            else
-            {
-                console.log('NEW QUESTION');
-                
-                /* choices presents, hide */
-                choices_block_array[0].style.visibility = "hidden";
-                
-                /* new paragraph then hr */
-                var paragraph = document.createElement("p");
-                paragraph.id = "ptexified";
-                var hr = document.createElement('hr');
-                paragraph.appendChild(hr); 
-                
-                /* Get choices */
-                var choices_array  = document.getElementsByClassName('padding-top ng-binding ng-scope');
-                for(i=0;i<choices_array.length;i++)
-                {
-                    var choice  = choices_array[i].innerHTML;
-                    var iDiv = document.createElement('div');
-                    iDiv.id = 'block';
-                    iDiv.className = 'block';
-                    iDiv.innerHTML = choice;
-                    paragraph.appendChild(iDiv); 
-                }
-                
-                /* add paragraph's choices to question */
-                document.getElementsByClassName('question-body ng-binding ng-isolate-scope')[0].appendChild(paragraph);
-            }
-        }
+        console.log('TeXify-Plickers error MathJax not loaded yet' + startTime.toLocaleTimeString());
+        return;
+    }
+    
+    /* choices div present ? */
+    var choices_div_array = document.getElementsByClassName('choices-container animate-transition ng-isolate-scope');
+    if( choices_div_array.length > 0 )
+    {
+        var choices_div = choices_div_array[0];
         
-        console.log('TeXify-Plickers MathJax rescan ' + startTime.toLocaleTimeString());
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        /* Is the question content the special paragraph ? */
+        var special_span = document.getElementById("spantexified");
+
+        /* special_span is present  ? */
+        if( special_span )
+        {
+            console.log('SAME QUESTION');
+        }
+        else
+        {
+            console.log('NEW QUESTION');
+
+            /* choices presents, hide */
+            choices_div.style.visibility = "hidden";
+
+            /* new span then hr */
+            var span = document.createElement("span");
+            span.id = "spantexified";
+            span.style.fontSize = '80%';
+            var hr = document.createElement('hr');
+            span.appendChild(hr); 
+
+            /* Get choices */
+            var choices_array  = document.getElementsByClassName('padding-top ng-binding ng-scope');
+            for(i=0;i<choices_array.length;i++)
+            {
+                var choice  = choices_array[i].innerHTML;
+                var iDiv = document.createElement('div');
+                iDiv.id = 'texifiedchoice'+i;
+                iDiv.innerHTML = choice;
+                span.appendChild(iDiv); 
+            }
+
+            /* add span's choices to question */
+            document.getElementsByClassName('question-body ng-binding ng-isolate-scope')[0].appendChild(span);
+        }
     }
-    else
-    {
-        console.log('TeXify-Plickers error MathJax not loaded ' + startTime.toLocaleTimeString());
-    }
+
+    console.log('TeXify-Plickers MathJax rescan ' + startTime.toLocaleTimeString());
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
 }
 
 /* Application */
