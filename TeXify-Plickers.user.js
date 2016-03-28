@@ -52,7 +52,6 @@ function TeXifyPlickers() {
                 paragraph.appendChild(hr); 
                 
                 /* Get choices */
-                
                 var choices_array  = document.getElementsByClassName('padding-top ng-binding ng-scope');
                 for(i=0;i<choices_array.length;i++)
                 {
@@ -79,7 +78,6 @@ function TeXifyPlickers() {
 }
 
 /* Application */
-
 if (self == top) { /* run only in the top frame. we do our own frame parsing */
     var startTime = new Date();
     console.log('TeXify-Plickers is started ' + startTime.toLocaleTimeString());
