@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	TeXify-Plickers
 // @namespace	https://github.com/obook/TeXify-Plickers
-// @version	9
+// @version	10
 // @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
 // @author	obooklage
 // @grant	none
@@ -13,11 +13,12 @@
 // ==/UserScript==
 
 var mathjaxloaded = false;
+var debugtexify = false;
 
 function OnLoadMathJax()
 {
     var startTime = new Date();
-    console.log('TeXify-Plickers MathJax loaded.' + startTime.toLocaleTimeString());
+    console.log('TeXify-Plickers MATHJAX READY ' + startTime.toLocaleTimeString());
     
     MathJax.Hub.Config({
     showProcessingMessages : false,
@@ -33,9 +34,9 @@ function OnLoadMathJax()
 function TeXifyPlickers() {
     var startTime = new Date();
     
-    if( mathjaxloaded != true)
+    if( mathjaxloaded !== true)
     {
-        console.log('TeXify-Plickers error MathJax not loaded yet' + startTime.toLocaleTimeString());
+        console.log('TeXify-Plickers MATHJAX NOT LOADED YET ' + startTime.toLocaleTimeString());
         return;
     }
     
@@ -44,13 +45,9 @@ function TeXifyPlickers() {
     if( choices_div_array.length > 0 )
     {
         /* Is the question content the special span ? */
-        if( document.getElementById("spantexified") )
+        if( !document.getElementById("spantexified") )
         {
-            console.log('SAME QUESTION');
-        }
-        else
-        {
-            console.log('NEW QUESTION');
+            console.log('TeXify-Plickers NEW QUESTION ' + startTime.toLocaleTimeString());
 
             /* choices presents, hide */
             choices_div_array[0].style.visibility = "hidden";
@@ -76,17 +73,23 @@ function TeXifyPlickers() {
             /* add span's choices to question */
             document.getElementsByClassName('question-body ng-binding ng-isolate-scope')[0].appendChild(span);
         }
+        else
+        {
+            if( debugtexify === true )
+                console.log('TeXify-Plickers SAME QUESTION ' + startTime.toLocaleTimeString());
+        }  
     }
 
-    console.log('TeXify-Plickers MathJax rescan ' + startTime.toLocaleTimeString());
+    if( debugtexify === true )
+        console.log('TeXify-Plickers MATHJAX RESCAN ' + startTime.toLocaleTimeString());
+    
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-
 }
 
 /* Application */
 if (self == top) { /* run only in the top frame. we do our own frame parsing */
     var startTime = new Date();
-    console.log('TeXify-Plickers is started ' + startTime.toLocaleTimeString());
+    console.log('TeXify-Plickers STARTED ' + startTime.toLocaleTimeString());
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML";
