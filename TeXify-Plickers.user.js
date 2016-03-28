@@ -17,7 +17,7 @@ var mathjaxloaded = false;
 function OnLoadMathJax()
 {
     var startTime = new Date();
-	console.log('TeXify-Plickers MathJax loaded.' + startTime.toLocaleTimeString());
+    console.log('TeXify-Plickers MathJax loaded.' + startTime.toLocaleTimeString());
     
     MathJax.Hub.Config({
     showProcessingMessages : false,
@@ -27,7 +27,7 @@ function OnLoadMathJax()
     }
     });
     
-	mathjaxloaded = true;
+    mathjaxloaded = true;
 }
 
 function TeXifyPlickers() {
@@ -43,13 +43,8 @@ function TeXifyPlickers() {
     var choices_div_array = document.getElementsByClassName('choices-container animate-transition ng-isolate-scope');
     if( choices_div_array.length > 0 )
     {
-        var choices_div = choices_div_array[0];
-        
-        /* Is the question content the special paragraph ? */
-        var special_span = document.getElementById("spantexified");
-
-        /* special_span is present  ? */
-        if( special_span )
+        /* Is the question content the special span ? */
+        if( document.getElementById("spantexified") )
         {
             console.log('SAME QUESTION');
         }
@@ -58,9 +53,9 @@ function TeXifyPlickers() {
             console.log('NEW QUESTION');
 
             /* choices presents, hide */
-            choices_div.style.visibility = "hidden";
+            choices_div_array[0].style.visibility = "hidden";
 
-            /* new span then hr */
+            /* new span */
             var span = document.createElement("span");
             span.id = "spantexified";
             span.style.fontSize = '80%';
