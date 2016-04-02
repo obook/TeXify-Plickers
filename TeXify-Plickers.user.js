@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name	TeXify-Plickers
 // @namespace	https://github.com/obook/TeXify-Plickers
-// @version	11
+// @version	12
 // @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
 // @author	obooklage
+// @licence MIT License (MIT)
 // @grant	none
 // @include	https://plickers.com/*
 // @downloadURL	https://github.com/obook/TeXify-Plickers/
@@ -14,6 +15,7 @@
 
 var mathjaxloaded = false;
 var debugtexify = false;
+var movequestionimage = true;
 
 function OnLoadMathJax()
 {
@@ -51,11 +53,26 @@ function TeXifyPlickers() {
 
             /* choices presents, hide */
             choices_div_array[0].style.visibility = "hidden";
-
+                    
             /* new span */
             var span = document.createElement("span");
             span.id = "spantexified";
             span.style.fontSize = '80%';
+
+            /* move question picture  */
+            var pictures_div_array = document.getElementsByClassName('image-container');
+            if( pictures_div_array.length > 0 && movequestionimage === true)
+            {
+                span.appendChild( pictures_div_array[0] );
+            }
+ 
+            /* add paragraph */
+            
+            var paragraph = document.createElement('p');
+            span.appendChild(paragraph);
+            
+            /* add hr */
+            
             var hr = document.createElement('hr');
             span.appendChild(hr); 
 
