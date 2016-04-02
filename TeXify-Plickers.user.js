@@ -15,7 +15,7 @@
 
 var mathjaxloaded = false;
 var debugtexify = false;
-var movequestionimage = true;
+var movequestionimage = false;
 
 function OnLoadMathJax()
 {
