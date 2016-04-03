@@ -1,16 +1,17 @@
 // ==UserScript==
-// @name	TeXify-Plickers
-// @namespace	https://github.com/obook/TeXify-Plickers
+// @name TeXify-Plickers
+// @namespace https://github.com/obook/TeXify-Plickers
 // @version	12
 // @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
-// @author	obooklage
+// @author obooklage
 // @licence MIT License (MIT)
-// @grant	none
-// @include	https://plickers.com/*
-// @downloadURL	https://github.com/obook/TeXify-Plickers/
-// @updateURL	https://github.com/obook/TeXify-Plickers/raw/master/TeXify-Plickers.user.js
-// @icon	https://github.com/obook/TeXify-Plickers/raw/master/icon.png
-// @run-at	document-end
+// @grant none
+// @include https://plickers.com/*
+// @homepageURL https://github.com/obook/TeXify-Plickers/
+// @updateURL https://github.com/obook/TeXify-Plickers/raw/master/TeXify-Plickers.user.js
+// @downloadURL	https://github.com/obook/TeXify-Plickers/raw/master/TeXify-Plickers.user.js
+// @icon https://github.com/obook/TeXify-Plickers/raw/master/icon.png
+// @run-at document-end
 // ==/UserScript==
 
 var mathjaxloaded = false;
@@ -67,12 +68,10 @@ function TeXifyPlickers() {
             }
  
             /* add paragraph */
-            
             var paragraph = document.createElement('p');
             span.appendChild(paragraph);
             
             /* add hr */
-            
             var hr = document.createElement('hr');
             span.appendChild(hr); 
 
