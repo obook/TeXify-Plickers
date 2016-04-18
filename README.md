@@ -44,7 +44,7 @@ to
 // @include	*
 ```
 
-#### picture of question is inserted after choices.
+#### Picture of question is inserted after choices.
 
 
 
