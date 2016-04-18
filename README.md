@@ -4,7 +4,7 @@
 ### Installation and usage
 
 * 1) install [GreaseMonkey for FireFox](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/) or [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo);
-* 2) install [TeXify-Plickers user script](https://github.com/obook/TeXify-Plickers/raw/master/TeXify-Plickers.user.js);
+* 2) install [TeXify-Plickers user script](https://raw.githubusercontent.com/obook/TeXify-Plickers/master/user-script/TeXify-Plickers.user.js);
 * 3) Create questions and use delimiters **$$** and **$$** or **[;** and **;]** (inline) for insert LaTeX code.
 
 ### Sample
