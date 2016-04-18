@@ -1,19 +1,19 @@
 # TeXify-Plickers
 <img src="LOGO.png" width="48"> TeXify-Plickers allows you to include mathematics in [Plickers](https://plickers.com) questions. Is not a formula editor, LaTeX language must be known. Library used : the JavaScript display engine [MathJax](https://www.mathjax.org/).
 
-### Installation and usage
+## Installation and usage
 
-## By user script
+### By user script
 
 * 1) install [GreaseMonkey for FireFox](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/) or [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo);
 * 2) install [TeXify-Plickers user script](https://raw.githubusercontent.com/obook/TeXify-Plickers/master/user-script/TeXify-Plickers.user.js);
 * 3) Create questions and use delimiters **$$** and **$$** or **[;** and **;]** (inline) for insert LaTeX code.
 
-## By FireFox Addon
+### By FireFox Addon
 
 * install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.8-an%2Bfx.xpi)
 
-### Sample
+## Sample
 
 ```
 In physics, the mass-energy equivalence is stated by the equation [; E=mc^2 ;], discovered in 1905 by Albert Einstein. Depending on the value of  [; x ;] the equation  [;  f(x) = \sum_{i=0}^{n} \frac{a_i}{1+x} ;] may diverge or converge.
@@ -28,9 +28,9 @@ D: roots [; x_{1,2} = \frac{- b \pm \sqrt{\Delta}}{2a} ;]
 
 <img src="sample.png" width="328">
 
-### Known Bugs
+## Known Bugs
 
-#### tampermonkey for Dolphin
+### tampermonkey for Dolphin
 
 Under tampermonkey for Dolphin (Android), the @include directive is buggy. You must change the script line
 
