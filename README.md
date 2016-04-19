@@ -1,5 +1,5 @@
 # TeXify-Plickers
-<img src="LOGO.png" width="64"> TeXify-Plickers allows you to include mathematics in [Plickers](https://plickers.com) questions. Is not a formula editor, LaTeX language must be known. Based on [MathJax](https://www.mathjax.org/) technology.
+<img src="LOGO.png" width="64"> TeXify-Plickers allows you to include mathematics in [Plickers](https://plickers.com) questions. Is **NOT** a formula editor; LaTeX, MathML or AsciiMath notation language must be known. Is based on [MathJax](https://www.mathjax.org/) technology.
 
 ## Installation and usage
 
@@ -13,6 +13,8 @@ You can include mathematics to plickers using a user-script or a firefox addon.
 ### Use the FireFox Addon
 
 * install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.8-an%2Bfx.xpi)
+
+### Usage
 
 Then, create questions and use delimiters **$$** and **$$** or **[;** and **;]** (inline) for insert LaTeX code.
 
