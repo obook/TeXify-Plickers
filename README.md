@@ -18,14 +18,7 @@ Then, create questions and use delimiters **$$** and **$$** or **[;** and **;]**
 
 ## Sample
 
-```
-17) If [; \, x=a^{- \frac{1}{2} } \, ;] where [;a > 0;] and [;x > 0;] which of the following equations gives a in terms of [;x;]?
-
-A: [; a= \frac{1}{ \sqrt{x} } ;]
-B: [; a= \frac{1}{ x^2} ;]
-C: [; a= \sqrt{x}  ;]
-D: [; a= -x^2  ;]
-```
+<img src="question-edit.png">
 
 ### Live view result
 
