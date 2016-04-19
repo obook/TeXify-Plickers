@@ -18,11 +18,11 @@ Then, create questions and use delimiters **$$** and **$$** or **[;** and **;]**
 
 ## Sample
 
-<img src="question-edit.png">
+<img src="question-edit.png" width="420">
 
-### Live view result
+Live view result
 
-<img src="question-view.png">
+<img src="question-view.png" width="420">
 
 ## Known Bugs
 
