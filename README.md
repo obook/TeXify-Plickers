@@ -24,7 +24,7 @@ Then, create questions and use delimiters **$$** and **$$** or **[;** and **;]**
 
 Live view result
 
-<img src="question-view.png" width="420">
+<img src="screen-view.png" width="420">
 
 ## Known Bugs
 
