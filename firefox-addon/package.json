@@ -1,14 +1,14 @@
 {
   "title": "TeXifyPlickers",
   "name": "texifyplickers",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Add mathematics in Plickers",
   "homepage": "https://github.com/obook/TeXify-Plickers",
   "main": "lib/index.js",
   "author": "obooklage",
   "engines": {
-    "firefox": ">=38.0a1",
-    "fennec": ">=38.0a1"
+    "firefox": "30.0 - 42.*",
+    "fennec": "30.0 - 42.*"
   },
   "license": "MIT",
   "keywords": [
