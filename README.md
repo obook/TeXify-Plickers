@@ -12,7 +12,7 @@ You can include mathematics to plickers using a user-script or a firefox add-on.
 
 ### Use the FireFox Add-on
 
-* install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.8-an%2Bfx.xpi)
+* install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.9-an+fx.xpi?raw=true)
 
 ### Usage
 
