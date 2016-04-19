@@ -1,5 +1,5 @@
 # TeXify-Plickers
-<img src="LOGO.png" width="48"> TeXify-Plickers allows you to include mathematics in [Plickers](https://plickers.com) questions. Is not a formula editor, LaTeX language must be known. Library used : the JavaScript display engine [MathJax](https://www.mathjax.org/).
+<img src="LOGO.png" width="48"> TeXify-Plickers allows you to include mathematics in [Plickers](https://plickers.com) questions. Is not a formula editor, LaTeX language must be known. Based on [MathJax](https://www.mathjax.org/) technology.
 
 ## Installation and usage
 
