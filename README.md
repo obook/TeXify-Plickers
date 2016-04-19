@@ -3,12 +3,12 @@
 
 ## Installation and usage
 
-### By user script
+### Use user script
 
 * 1) install [GreaseMonkey for FireFox](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/) or [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo);
 * 2) install [TeXify-Plickers user script](https://raw.githubusercontent.com/obook/TeXify-Plickers/master/user-script/TeXify-Plickers.user.js);
 
-### By FireFox Addon
+### Use FireFox Addon
 
 * install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.8-an%2Bfx.xpi)
 
