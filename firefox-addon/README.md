@@ -1,2 +1,1 @@
-#My Jetpack Addon
-A basic add-on
+#TeXifyPlickers Mozilla Firefox Addon
