@@ -16,9 +16,9 @@ You can include mathematics to plickers using a user-script or a firefox add-on.
 
 ### Use the Add-on for mobile (FireFox android)
 
-* install [FireFox Nighty for Android](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.9-an+fx.xpi?raw=true)
+* 1) install [FireFox Nighty for Android](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.9-an+fx.xpi?raw=true)
 
-* install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.9-an+fx.xpi?raw=true)
+* 2) install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.9-an+fx.xpi?raw=true)
 
 ### Usage
 
