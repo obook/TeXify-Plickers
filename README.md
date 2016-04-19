@@ -10,15 +10,9 @@ You can include mathematics to plickers using a user-script or a firefox add-on.
 * 1) install [GreaseMonkey for FireFox](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/) or [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo);
 * 2) install [TeXify-Plickers user script](https://raw.githubusercontent.com/obook/TeXify-Plickers/master/user-script/TeXify-Plickers.user.js);
 
-### Use the Add-on for desktop (FireFox)
+### Use the Add-on for desktop (FireFox & FireFox for Android)
 
-* install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.9-an+fx.xpi?raw=true)
-
-### Use the Add-on for mobile (FireFox android)
-
-* 1) install [FireFox Nighty for Android](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.9-an+fx.xpi?raw=true)
-
-* 2) install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/firefox-addon/texifyplickers-0.0.9-an+fx.xpi?raw=true)
+* install [FireFox Addon](https://addons.mozilla.org/en-US/firefox/addon/texifyplickers/)
 
 ### Usage
 
