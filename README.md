@@ -19,17 +19,17 @@ Then, create questions and use delimiters **$$** and **$$** or **[;** and **;]**
 ## Sample
 
 ```
-In physics, the mass-energy equivalence is stated by the equation [; E=mc^2 ;], discovered in 1905 by Albert Einstein. Depending on the value of  [; x ;] the equation  [;  f(x) = \sum_{i=0}^{n} \frac{a_i}{1+x} ;] may diverge or converge.
+17) If [; \, x=a^{- \frac{1}{2} } \, ;] where [;a > 0;] and [;x > 0;] which of the following equations gives a in terms of [;x;]?
 
-A: Integral [;  \int_{a}^{b} x^2 dx ;]
-B: Sum [; \sum_{n=1}^{\infty} 2^{-n} = 1 ;]
-C: [;  \lim_{h \rightarrow 0 } \frac{f(x+h)-f(x)}{h}  ;]
-D: roots [; x_{1,2} = \frac{- b \pm \sqrt{\Delta}}{2a} ;]
+A: [; a= \frac{1}{ \sqrt{x} } ;]
+B: [; a= \frac{1}{ x^2} ;]
+C: [; a= \sqrt{x}  ;]
+D: [; a= -x^2  ;]
 ```
 
 ### Live view result
 
-<img src="sample.png" width="328">
+<img src="question-view.png">
 
 ## Known Bugs
 
