@@ -22,10 +22,10 @@ Then, create questions and use delimiters **[;** and **;]** (inline) or **$$** a
 ```
 14) If [;  \, \frac{2}{a-1} = \frac{4}{y} \, ;] and [; y \neq 0 ;] where  [; a \neq 1 ;] , what is [; y ;] in terms of [; a ;] ?
 
-A: [; y = 2a -2  ;]
-B: [;  y = 2a -4 ;]
-C: [;  y = 2a - \frac{1}{2} ;]
-D: [; y= \frac{1}{2} \, a +1 ;]
+A: [; y = 2a - 2  ;]
+B: [; y = 2a - 4 ;]
+C: [; y = 2a - \frac{1}{2} ;]
+D: [; y= \frac{1}{2} \, a + 1 ;]
 ```
 
 Live view result
