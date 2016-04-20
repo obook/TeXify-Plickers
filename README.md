@@ -3,7 +3,7 @@
 
 ## Installation and usage
 
-You can include mathematics to plickers using a _user-script_ or a _firefox add-on_.
+You can include mathematics to plickers using a GreaseMonkey/Tampermonkey _user-script_ or a native _firefox add-on_ desktop and mobile (Android).
 
 ### Use a user script for desktop (FireFox & Google Chrome desktop)
 
@@ -26,6 +26,54 @@ Live view result
 
 <img src="screen-view.png" width="420">
 
+## Technics and security consideration
+
+### compiling firefox add-on
+
+## nmp jpm jpm-mobile installation
+
+$ sudo apt-get install npm
+$ sudo npm install jpm jpm-mobile --global
+
+edit /usr/local/lib/node\_modules/jpm\_mobile/bin/jmp-mobile and add 1 line and change 2 lines :
+```
+var VERSION = require("../package.json").version;
+**var cmd = require("jpm/lib/cmd");**
+var run = require("../lib/run").run;
+...
+.action(function () {
+    var manifest = require(path.join(cwd, "package.json"));
+    **run(manifest, makeOptions(program, "run"))**
+...
+  .action(function () {
+    var manifest = require(path.join(cwd, "package.json"))
+    **run(manifest, makeOptions(program, "test"))**
+```
+edit cat /usr/local/lib/node\_modules/jpm\_mobile/lib/adb.js and modify 1 line
+
+```
+  console.log("Starting Firefox with " + options.profile);
+  var p = cp.spawn(options.adb, [
+              "shell",
+              "am start",
+              "-a",
+              "android.activity.MAIN",
+              "-n",
+              options.intent + "/.App",
+              "--es",
+              "args",
+              **"'-profile " + options.profile + "'"**
+          ], makeOptions(options));
+  p.stdout.pipe(process.stdout);
+```
+
+  # test for android
+
+jpm-mobile run -b firefox --adb $(which adb)
+
+### security
+TeXify-Plickers use script = createElement("script") and document.head.appendChild(script) to add mathjax javascript library from [hardcoded link of MathJax Content Delivery Network (CDN) ](https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML) to plickers.com website. This is secure until MathJax CDN is not compromised.
+
 ## Known Bugs
 
 ### tampermonkey for Dolphin
@@ -33,19 +81,15 @@ Live view result
 Under tampermonkey for Dolphin (Android), the @include directive is buggy. You must change the script line
 
 ```
-// @include	https://plickers.com/*
+// @include https://plickers.com/*
 ```
 to
 
 ```
-// @include	*
+// @include *
 ```
 
 ### Picture of question is inserted after choices.
-
-## Technics and security consideration
-
-TeXify-Plickers use script = createElement("script") and document.head.appendChild(script) to add mathjax javascript library from [hardcoded link  of MathJax Content Delivery Network (CDN) ](https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML) to plickers.com website.
 
 *************************************************************************************************************
 <img src="badge.gif" width="128">
