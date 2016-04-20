@@ -10,17 +10,23 @@ You can include mathematics to plickers using a GreaseMonkey/Tampermonkey _user-
 * 1) install [GreaseMonkey for FireFox](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/) or [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo);
 * 2) install [TeXify-Plickers user script](https://raw.githubusercontent.com/obook/TeXify-Plickers/master/user-script/TeXify-Plickers.user.js);
 
-### Use the Add-on for desktop (FireFox & FireFox for Android)
+### Use the native FireFox Add-on (Desktop & Android)
 
 * install [FireFox Addon](https://addons.mozilla.org/en-US/firefox/addon/texifyplickers/)
 
 ### Usage
 
-Then, create questions and use delimiters **$$** and **$$** or **[;** and **;]** (inline) for insert LaTeX code.
+Then, create questions and use delimiters **[;** and **;]** (inline) or **$$** and **$$** for insert math code.
 
 ## Sample
+```
+14) If [;  \, \frac{2}{a-1} = \frac{4}{y} \, ;] and [; y \neq 0 ;] where  [; a \neq 1 ;] , what is [; y ;] in terms of [; a ;] ?
 
-<img src="question-edit.png" width="420">
+A: [; y = 2a -2  ;]
+B: [;  y = 2a -4 ;]
+C: [;  y = 2a - \frac{1}{2} ;]
+D: [; y= \frac{1}{2} \, a +1 ;]
+```
 
 Live view result
 
