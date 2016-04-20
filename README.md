@@ -3,9 +3,9 @@
 
 ## Installation and usage
 
-You can include mathematics to plickers using a user-script or a firefox add-on.
+You can include mathematics to plickers using a _user-script_ or a _firefox add-on_.
 
-### Use a user script for desktop (FireFox - Google Chrome desktop)
+### Use a user script for desktop (FireFox & Google Chrome desktop)
 
 * 1) install [GreaseMonkey for FireFox](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/) or [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo);
 * 2) install [TeXify-Plickers user script](https://raw.githubusercontent.com/obook/TeXify-Plickers/master/user-script/TeXify-Plickers.user.js);
@@ -41,7 +41,12 @@ to
 // @include	*
 ```
 
-#### Picture of question is inserted after choices.
+### Picture of question is inserted after choices.
+
+## Technics and security consideration
+
+TeXify-Plickers use script = createElement("script") and document.head.appendChild(script) to add mathjax javascript library from [hardcoded link  of MathJax Content Delivery Network (CDN) ](https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML) to plickers.com website.
+
 *************************************************************************************************************
 <img src="badge.gif" width="128">
 
