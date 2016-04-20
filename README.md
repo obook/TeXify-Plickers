@@ -12,7 +12,7 @@ You can include mathematics to plickers using a GreaseMonkey/Tampermonkey _user-
 
 ### Use the native FireFox Add-on (Desktop & Android)
 
-* install [FireFox Addon](https://addons.mozilla.org/en-US/firefox/addon/texifyplickers/)
+* install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/texifyplickers-0.0.9-an+fx.xpi?raw=true)
 
 ### Usage
 
