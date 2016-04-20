@@ -73,7 +73,7 @@ jpm-mobile run -b firefox --adb $(which adb)
 ```
 
 ### security
-TeXify-Plickers use script = createElement("script") and document.head.appendChild(script) to add mathjax javascript library from [hardcoded link of MathJax Content Delivery Network (CDN) ](https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML) to plickers.com website. This is secure until MathJax CDN is not compromised.
+TeXify-Plickers use script = createElement("script") and document.head.appendChild(script) to add mathjax javascript library from [hardcoded link of MathJax Content Delivery Network (CDN) ](https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML) to plickers.com website. This is secure until MathJax CDN and your DNS are not compromised.
 
 ## Known Bugs
 
