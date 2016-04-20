@@ -26,7 +26,7 @@ Live view result
 
 <img src="screen-view.png" width="420">
 
-## Technics and security consideration
+## Technics and security considerations
 
 ### compiling firefox add-on
 
