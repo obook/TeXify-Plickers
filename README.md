@@ -30,24 +30,24 @@ Live view result
 
 ### compiling firefox add-on
 
-## nmp jpm jpm-mobile installation
-
+#### nmp jpm jpm-mobile installation
+```
 $ sudo apt-get install npm
 $ sudo npm install jpm jpm-mobile --global
-
+```
 edit /usr/local/lib/node\_modules/jpm\_mobile/bin/jmp-mobile and add 1 line and change 2 lines :
 ```
 var VERSION = require("../package.json").version;
-**var cmd = require("jpm/lib/cmd");**
+var cmd = require("jpm/lib/cmd");
 var run = require("../lib/run").run;
 ...
 .action(function () {
     var manifest = require(path.join(cwd, "package.json"));
-    **run(manifest, makeOptions(program, "run"))**
+    run(manifest, makeOptions(program, "run"))
 ...
   .action(function () {
     var manifest = require(path.join(cwd, "package.json"))
-    **run(manifest, makeOptions(program, "test"))**
+    run(manifest, makeOptions(program, "test"))
 ```
 edit cat /usr/local/lib/node\_modules/jpm\_mobile/lib/adb.js and modify 1 line
 
@@ -62,12 +62,12 @@ edit cat /usr/local/lib/node\_modules/jpm\_mobile/lib/adb.js and modify 1 line
               options.intent + "/.App",
               "--es",
               "args",
-              **"'-profile " + options.profile + "'"**
+              "'-profile " + options.profile + "'"
           ], makeOptions(options));
   p.stdout.pipe(process.stdout);
 ```
 
-  # test for android
+#### test for android
 
 jpm-mobile run -b firefox --adb $(which adb)
 
