@@ -37,8 +37,8 @@ Live view result
 
 #### npm, jpm, jpm-mobile installation
 ```
-$ sudo apt-get install npm
-$ sudo npm install jpm jpm-mobile --global
+sudo apt-get install npm
+sudo npm install jpm jpm-mobile --global
 ```
 edit /usr/local/lib/node\_modules/jpm\_mobile/bin/jmp-mobile and add **cmd** line and change 2 **run** lines :
 ```
