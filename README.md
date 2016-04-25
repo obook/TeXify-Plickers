@@ -46,17 +46,19 @@ var VERSION = require("../package.json").version;
 var cmd = require("jpm/lib/cmd");
 var run = require("../lib/run").run;
 ...
-.action(function () {
+  .action(function () {
     var manifest = require(path.join(cwd, "package.json"));
     run(manifest, makeOptions(program, "run"))
 ...
   .action(function () {
     var manifest = require(path.join(cwd, "package.json"))
     run(manifest, makeOptions(program, "test"))
+...
 ```
 edit cat /usr/local/lib/node\_modules/jpm\_mobile/lib/adb.js and modify **profile** line
 
 ```
+...
   console.log("Starting Firefox with " + options.profile);
   var p = cp.spawn(options.adb, [
               "shell",
@@ -70,6 +72,7 @@ edit cat /usr/local/lib/node\_modules/jpm\_mobile/lib/adb.js and modify **profil
               "'-profile " + options.profile + "'"
           ], makeOptions(options));
   p.stdout.pipe(process.stdout);
+...
 ```
 
 #### test on android device
