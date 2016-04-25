@@ -3,14 +3,14 @@
 
 ## Installation and usage
 
-You can include mathematics to plickers using a GreaseMonkey/Tampermonkey _user-script_ or a native _firefox add-on_ desktop and mobile (Android).
+You can include mathematics to plickers using a GreaseMonkey/Tampermonkey _user-script_ or a native _firefox add-on_ desktop and mobile.
 
 ### Use a user script for desktop (FireFox & Google Chrome desktop)
 
 * 1) install [GreaseMonkey for FireFox](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/) or [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo);
 * 2) install [TeXify-Plickers user script](https://raw.githubusercontent.com/obook/TeXify-Plickers/master/user-script/TeXify-Plickers.user.js);
 
-### Use the native FireFox Add-on (Desktop & Android)
+### Use the native FireFox Add-on (Desktop & Mobile)
 
 * install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/texifyplickers-0.0.9-an+fx.xpi?raw=true)
 
@@ -36,7 +36,7 @@ Live view result
 
 ### compiling firefox add-on
 
-#### nmp jpm jpm-mobile installation
+#### npm, jpm, jpm-mobile installation
 ```
 $ sudo apt-get install npm
 $ sudo npm install jpm jpm-mobile --global
