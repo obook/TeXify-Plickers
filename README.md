@@ -84,6 +84,11 @@ package:org.mozilla.firefox_beta
 $ jpm-mobile run -b firefox_beta --adb $(which adb)
 ```
 
+#### test on desktop
+```
+$ jpm run -b $(which firefox)
+```
+
 ### security
 TeXify-Plickers use script = createElement("script") and document.head.appendChild(script) to add mathjax javascript library from [hardcoded link of MathJax Content Delivery Network (CDN) ](https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML). This is secure until MathJax CDN and your DNS are not compromised.
 
