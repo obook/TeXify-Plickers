@@ -40,7 +40,8 @@ Live view result
 sudo apt-get install npm
 sudo npm install jpm jpm-mobile --global
 ```
-edit /usr/local/lib/node\_modules/jpm-mobile/bin/jmp\-mobile and add **cmd** line and change 2 **run** lines :
+edit /usr/local/lib/node\_modules/jpm-mobile/bin/jpm-mobile and add **cmd** line and change 2 **run** lines :
+
 ```
 var VERSION = require("../package.json").version;
 var cmd = require("jpm/lib/cmd");
