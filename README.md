@@ -56,10 +56,10 @@ var run = require("../lib/run").run;
     run(manifest, makeOptions(program, "test"))
 ...
 ```
-edit /usr/local/lib/node\_modules/jpm-mobile/lib/adb.js and modify function amStart(options) :
+edit /usr/local/lib/node\_modules/jpm-mobile/lib/adb.js and add "'" in function amStart(options) :
 
 ```
-...
+function amStart(options) {
   console.log("Starting Firefox with " + options.profile);
   var p = cp.spawn(options.adb, [
               "shell",
