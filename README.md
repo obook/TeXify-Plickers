@@ -56,7 +56,7 @@ var run = require("../lib/run").run;
     run(manifest, makeOptions(program, "test"))
 ...
 ```
-edit cat /usr/local/lib/node\_modules/jpm\_mobile/lib/adb.js and modify **profile** line
+edit /usr/local/lib/node\_modules/jpm-mobile/lib/adb.js and modify **profile** line
 
 ```
 ...
