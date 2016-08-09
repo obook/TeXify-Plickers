@@ -78,7 +78,10 @@ function amStart(options) {
 
 #### test on android device
 ```
-jpm-mobile run -b firefox --adb $(which adb)
+$ adb shell pm list packages | grep org.mozilla
+package:org.mozilla.firefox
+package:org.mozilla.firefox_beta
+$ jpm-mobile run -b firefox_beta --adb $(which adb)
 ```
 
 ### security
