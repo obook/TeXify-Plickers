@@ -75,6 +75,7 @@ function amStart(options) {
   p.stdout.pipe(process.stdout);
 ...
 ```
+Then compile with "jpm xpi"
 
 #### test on android device
 ```
