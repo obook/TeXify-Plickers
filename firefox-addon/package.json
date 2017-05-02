@@ -1,7 +1,7 @@
 {
   "title": "TeXifyPlickers",
   "name": "texifyplickers",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Add mathematics in Plickers",
   "homepage": "https://github.com/obook/TeXify-Plickers",
   "main": "lib/index.js",

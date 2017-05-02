@@ -114,7 +114,8 @@ if (self == top) { /* run only in the top frame. we do our own frame parsing */
     console.log('FF-TeXify-Plickers STARTED ' + startTime.toLocaleTimeString());
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    /* end 30/04/2017 : script.src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"; */
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     script.onload = OnLoadMathJax;
     document.head.appendChild(script);
     window.setInterval(TeXifyPlickers, 3000);

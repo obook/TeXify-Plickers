@@ -7,7 +7,7 @@ You can include mathematics to plickers using a GreaseMonkey/Tampermonkey _user-
 
 ### Use the native FireFox Add-on (Desktop & Mobile)
 
-* install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/texifyplickers-0.0.9-an+fx.xpi?raw=true)
+* install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/texifyplickers.xpi?raw=true)
 
 ### Use a user script (FireFox & Google Chrome Desktop)
 
@@ -90,7 +90,7 @@ $ jpm run -b $(which firefox)
 ```
 
 ### security
-TeXify-Plickers use script = createElement("script") and document.head.appendChild(script) to add mathjax javascript library from [hardcoded link of MathJax Content Delivery Network (CDN) ](https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML). This is secure until MathJax CDN and your DNS are not compromised.
+TeXify-Plickers use script = createElement("script") and document.head.appendChild(script) to add mathjax javascript library from [hardcoded link of MathJax Content Delivery Network (CDN) ](https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML). This is secure until cloudflare CDN and your DNS are not compromised.
 
 ## Known Bugs
 
