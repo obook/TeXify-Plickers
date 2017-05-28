@@ -7,7 +7,7 @@ You can include mathematics to plickers using a GreaseMonkey/Tampermonkey _user-
 
 ### Use the native FireFox Add-on (Desktop & Mobile)
 
-* install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/texifyplickers.xpi?raw=true). For mobile, you need to uninstall previous version and turn off xpinstall.signatures.required in about:config
+* install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/texifyplickers.xpi?raw=true). You need to uninstall previous version and turn off xpinstall.signatures.required in about:config.
 
 ### Use a user script (FireFox & Google Chrome Desktop)
 
