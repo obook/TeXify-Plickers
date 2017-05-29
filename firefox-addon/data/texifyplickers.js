@@ -1,17 +1,18 @@
 // ==UserScript==
-// @name FF-TeXify-Plickers
-// @namespace https://github.com/obook/FF-TeXify-Plickers
-// @version	13
+// @name TeXify-Plickers
+// @namespace https://github.com/obook/TeXify-Plickers
+// @version	14
 // @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
 // @author obooklage
 // @licence MIT License (MIT)
 // @grant none
 // @include https://plickers.com/*
+// @include https://*.plickers.com/*
 // @include https://www.plickers.com/*
-// @homepageURL https://github.com/obook/FF-TeXify-Plickers/
-// @updateURL https://github.com/obook/FF-TeXify-Plickers/raw/master/FF-TeXify-Plickers.user.js
-// @downloadURL	https://github.com/obook/FF-TeXify-Plickers/raw/master/FF-TeXify-Plickers.user.js
-// @icon https://github.com/obook/FF-TeXify-Plickers/raw/master/icon.png
+// @homepageURL https://github.com/obook/TeXify-Plickers/
+// @updateURL https://github.com/obook/TeXify-Plickers/raw/master/TeXify-Plickers.user.js
+// @downloadURL	https://github.com/obook/TeXify-Plickers/raw/master/TeXify-Plickers.user.js
+// @icon https://github.com/obook/TeXify-Plickers/raw/master/icon.png
 // @run-at document-end
 // ==/UserScript==
 
@@ -19,13 +20,11 @@ var mathjaxloaded = false;
 var debugtexify = false;
 var movequestionimage = false;
 
-if( debugtexify === true )
-    console.log('FF-TeXify-Plickers starting ...');
-
 function OnLoadMathJax()
 {
-var startTime = new Date();
-
+    var startTime = new Date();
+    console.log('TeXify-Plickers MATHJAX READY ' + startTime.toLocaleTimeString());
+    
     MathJax.Hub.Config({
     showProcessingMessages : false,
     tex2jax: {
@@ -35,8 +34,6 @@ var startTime = new Date();
     });
     
     mathjaxloaded = true;
-
-    console.log('FF-TeXify-Plickers MATHJAX READY ' + startTime.toLocaleTimeString());
 }
 
 function TeXifyPlickers() {
@@ -44,7 +41,7 @@ function TeXifyPlickers() {
     
     if( mathjaxloaded !== true)
     {
-        console.log('FF-TeXify-Plickers MATHJAX NOT LOADED YET ' + startTime.toLocaleTimeString());
+        console.log('TeXify-Plickers MATHJAX NOT LOADED YET ' + startTime.toLocaleTimeString());
         return;
     }
     
@@ -55,7 +52,7 @@ function TeXifyPlickers() {
         /* Is the question content the special span ? */
         if( !document.getElementById("spantexified") )
         {
-            console.log('FF-TeXify-Plickers NEW QUESTION ' + startTime.toLocaleTimeString());
+            console.log('TeXify-Plickers NEW QUESTION ' + startTime.toLocaleTimeString());
 
             /* choices presents, hide */
             choices_div_array[0].style.visibility = "hidden";
@@ -97,31 +94,26 @@ function TeXifyPlickers() {
         else
         {
             if( debugtexify === true )
-                console.log('FF-TeXify-Plickers SAME QUESTION ' + startTime.toLocaleTimeString());
+                console.log('TeXify-Plickers SAME QUESTION ' + startTime.toLocaleTimeString());
         }  
     }
 
     if( debugtexify === true )
-        console.log('FF-TeXify-Plickers MATHJAX RESCAN ' + startTime.toLocaleTimeString());
+        console.log('TeXify-Plickers MATHJAX RESCAN ' + startTime.toLocaleTimeString());
     
     /* MathJax.Hub.Queue(["Typeset",MathJax.Hub]); : chrome compatible but not for firefox */
     MathJax.Hub.Typeset();
 }
 
-var startTime = new Date();
-
 /* Application */
 if (self == top) { /* run only in the top frame. we do our own frame parsing */
-    console.log('FF-TeXify-Plickers STARTED ' + startTime.toLocaleTimeString());
+    var startTime = new Date();
+    console.log('TeXify-Plickers STARTED ' + startTime.toLocaleTimeString());
     var script = document.createElement('script');
     script.type = 'text/javascript';
     /* end 30/04/2017 : script.src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"; */
     script.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     script.onload = OnLoadMathJax;
     document.head.appendChild(script);
-    window.setInterval(TeXifyPlickers, 3000);
-}
-else if( debugtexify === true )
-{
-    console.log('FF-TeXify-Plickers self is not top, NO INJECTION ' + startTime.toLocaleTimeString());
+    setInterval(TeXifyPlickers, 3000);
 }
