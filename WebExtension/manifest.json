@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "TeXifyPlickers WebExtension",
+	"version": "0.1.4",
+	"description": "Add mathematics in Plickers",
+	"icons": {
+		"48": "icons/icon48.png",
+		"96": "icons/icon96.png"
+	},
+	"content_scripts": [
+	{
+		"matches": ["*://*.plickers.com/*"],
+		"js": ["content_scripts/index.js"]
+	}
+	],
+	"web_accessible_resources": ["data/texifyplickers.js"]
+}
