@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name TeXify-Plickers
 // @namespace https://github.com/obook/TeXify-Plickers
-// @version	14
+// @version	15
 // @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
 // @author obooklage
 // @licence MIT License (MIT)
@@ -17,7 +17,7 @@
 // ==/UserScript==
 
 var mathjaxloaded = false;
-var debugtexify = false;
+var debugtexify = true;
 var movequestionimage = false;
 
 function OnLoadMathJax()
@@ -50,10 +50,14 @@ function TeXifyPlickers() {
     if( choices_div_array.length > 0 )
     {
         /* Is the question content the special span ? */
-        if( !document.getElementById("spantexified") )
+        if( document.getElementById("spantexified") === null )
         {
             console.log('TeXify-Plickers57 NEW QUESTION ' + startTime.toLocaleTimeString());
 
+
+			
+			
+			
             /* choices presents, hide */
             choices_div_array[0].style.visibility = "hidden";
                     
@@ -81,7 +85,9 @@ function TeXifyPlickers() {
             var choices_array  = document.getElementsByClassName('padding-top ng-binding ng-scope');
             for(i=0;i<choices_array.length;i++)
             {
-                var choice  = choices_array[i].innerHTML;
+                var choice  = choices_array[i].textContent;
+				if( debugtexify === true )
+					console.log('TeXify-Plickers57 answer :[' + choice +'] ' + startTime.toLocaleTimeString());
                 var iDiv = document.createElement('div');
                 iDiv.id = 'texifiedchoice'+i;
                 iDiv.innerHTML = choice;
@@ -89,18 +95,27 @@ function TeXifyPlickers() {
             }
 
             /* add span's choices to question */
-            document.getElementsByClassName('question-body ng-binding ng-isolate-scope')[0].appendChild(span);
+            document.getElementsByClassName('question-body ng-binding ng-isolate-scope')[0].appendChild(span);			
+			
+			
+			
+			
+			
+			
+			
+			
+			
         }
         else
         {
             if( debugtexify === true )
-                console.log('TeXify-Plickers57 SAME QUESTION ' + startTime.toLocaleTimeString());
+                console.log('TeXify-Plickers57 SAME QUESTION spantexified exists ' + startTime.toLocaleTimeString());
         }  
     }
-
+/*
     if( debugtexify === true )
         console.log('TeXify-Plickers57 MATHJAX RESCAN ' + startTime.toLocaleTimeString());
-    
+*/
     /* MathJax.Hub.Queue(["Typeset",MathJax.Hub]); : chrome compatible but not for firefox */
     MathJax.Hub.Typeset();
 }
