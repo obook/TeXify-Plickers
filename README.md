@@ -3,7 +3,7 @@
 
 ## Installation and usage
 
-You can include mathematics to plickers using a GreaseMonkey, TamperMonkey or ViolentMonkey _user-script_ or a native _firefox add-on_ (recommanded).
+You can include mathematics to plickers using a GreaseMonkey, TamperMonkey or ViolentMonkey _user-script_ (recommanded) or a native _firefox add-on_ (obsolete).
 
 ### Use the native FireFox Add-on (Desktop & Mobile)
 
