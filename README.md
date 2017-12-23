@@ -7,8 +7,7 @@ You can include mathematics to plickers using a GreaseMonkey, TamperMonkey or Vi
 
 ### Use a user script for FireFox & Google Chrome Desktop (recommanded)
 
-* install [GreaseMonkey for FireFox <57.0](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/) ; 
- [**ViolentMonkey for FireFox >=57.0**](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/) or [**ViolentMonkey for Chrome**](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag);
+* install [**ViolentMonkey for FireFox >=57.0**](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/) or [**ViolentMonkey for Chrome**](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag);
 * install [TeXify-Plickers user script](https://raw.githubusercontent.com/obook/TeXify-Plickers/master/user-script/TeXify-Plickers.user.js).
 
 ### Use the native FireFox Add-on for Desktop & Mobile (obsolete)
