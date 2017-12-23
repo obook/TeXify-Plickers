@@ -5,15 +5,15 @@
 
 You can include mathematics to plickers using a GreaseMonkey, TamperMonkey or ViolentMonkey _user-script_ (recommanded) or a native _firefox add-on_ (obsolete).
 
-### Use the native FireFox Add-on (Desktop & Mobile)
-
-* install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/texifyplickers.xpi?raw=true). You need to uninstall previous version and turn off xpinstall.signatures.required in about:config.
-
-### Use a user script (FireFox & Google Chrome Desktop)
+### Use a user script for FireFox & Google Chrome Desktop (recommanded)
 
 * install [GreaseMonkey for FireFox <57.0](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/) ; 
- [ViolentMonkey for FireFox >=57.0](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/) or [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo);
+ [**ViolentMonkey for FireFox >=57.0**](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/) or [**ViolentMonkey for Chrome**](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag);
 * install [TeXify-Plickers user script](https://raw.githubusercontent.com/obook/TeXify-Plickers/master/user-script/TeXify-Plickers.user.js).
+
+### Use the native FireFox Add-on for Desktop & Mobile (obsolete)
+
+* install [FireFox Addon](https://github.com/obook/TeXify-Plickers/blob/master/texifyplickers.xpi?raw=true). You need to uninstall previous version and turn off xpinstall.signatures.required in about:config.
 
 ### Usage
 Then, create questions and use delimiters **[;** and **;]** (inline) or **$$** and **$$** for insert math code.
