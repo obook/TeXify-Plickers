@@ -10,8 +10,8 @@
 // @include https://*.plickers.com/*
 // @include https://www.plickers.com/*
 // @homepageURL https://github.com/obook/TeXify-Plickers/
-// @updateURL https://raw.githubusercontent.com/obook/TeXify-Plickers/master/user-script/TeXify-Plickers.user.js
-// @downloadURL	https://raw.githubusercontent.com/obook/TeXify-Plickers/master/user-script/TeXify-Plickers.user.js
+// @updateURL https://github.com/obook/TeXify-Plickers/raw/master/user-script/TeXify-Plickers.user.js
+// @downloadURL	https://github.com/obook/TeXify-Plickers/raw/master/user-script/TeXify-Plickers.user.js
 // @icon https://github.com/obook/TeXify-Plickers/raw/master/icon.png
 // @run-at document-end
 // ==/UserScript==
