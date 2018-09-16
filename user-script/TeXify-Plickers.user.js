@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name TeXify-Plickers
 // @namespace https://github.com/obook/TeXify-Plickers
-// @version	15
+// @version	16
 // @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
 // @author obooklage
 // @licence MIT License (MIT)
