@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name TeXify-Plickers
 // @namespace https://github.com/obook/TeXify-Plickers
-// @version	16
+// @version	17
 // @description	GreaseMonkey script for add LaTeX code in Plickers website. Use delimiters [; and ;]
-// @author obooklage
+// @author obooklage - Education Nationale / Académie de Créteil - FRANCE
 // @licence MIT License (MIT)
 // @grant none
 // @include https://plickers.com/*
@@ -14,6 +14,11 @@
 // @run-at document-end
 // ==/UserScript==
 
+/* AS FONT SIZE +/- WAS REMOVED : NEW SETTING PLICKERS SEPTEMBER 2018 HERE */
+var QUESTION_TEXT_SIZE = "32px";
+var CHOICES_TEXT_SIZE = "24px";
+
+/* OTHER SETTINGS */
 var mathjaxloaded = false;
 var debugtexify = false;
 var movequestionimage = false;
@@ -24,9 +29,23 @@ function ConsolePrint(message)
   console.log('[TeXify-Plickers] '+ startTime.toLocaleTimeString() + ' ' + message) ;
 }
 
+function SetClassFontSize(ClassStr,SizeStr) {
+  var class_obj_array = document.getElementsByClassName(ClassStr);
+  if(class_obj_array)
+  {
+    for (var i = 0; i < class_obj_array.length; i++)
+    {
+      var element = class_obj_array[i];
+      if( element.innerText )
+      {
+        element.style["font-size"] = SizeStr;
+      }
+    }
+  } 
+}
+
 function OnLoadMathJax()
 {
-    ConsolePrint('MATHJAX READY');
     
     MathJax.Hub.Config({
     showProcessingMessages : false,
@@ -37,6 +56,8 @@ function OnLoadMathJax()
     });
     
     mathjaxloaded = true;
+
+    ConsolePrint('MATHJAX SET & READY');
 }
 
 function TeXifyPlickers() {
@@ -46,68 +67,21 @@ function TeXifyPlickers() {
         ConsolePrint('MATHJAX NOT LOADED YET ');
         return;
     }
-    
-    /* choices div present ? */
-    var choices_div_array = document.getElementsByClassName('choices-container animate-transition ng-isolate-scope');
-    if( choices_div_array.length > 0 )
-    {
-        /* Is the question content the special span ? */
-        if( !document.getElementById("spantexified") )
-        {
-            ConsolePrint('NEW QUESTION ');
-
-            /* choices presents, hide */
-            choices_div_array[0].style.visibility = "hidden";
-                    
-            /* new span */
-            var span = document.createElement("span");
-            span.id = "spantexified";
-            span.style.fontSize = '80%';
-
-            /* move question picture  */
-            var pictures_div_array = document.getElementsByClassName('image-container');
-            if( pictures_div_array.length > 0 && movequestionimage === true)
-            {
-                span.appendChild( pictures_div_array[0] );
-            }
- 
-            /* add paragraph */
-            var paragraph = document.createElement('p');
-            span.appendChild(paragraph);
-            
-            /* add hr */
-            var hr = document.createElement('hr');
-            span.appendChild(hr); 
-
-            /* Get choices */
-            var choices_array  = document.getElementsByClassName('padding-top ng-binding ng-scope');
-            for(i=0;i<choices_array.length;i++)
-            {
-                var choice  = choices_array[i].innerHTML;
-                var iDiv = document.createElement('div');
-                iDiv.id = 'texifiedchoice'+i;
-                iDiv.innerHTML = choice;
-                span.appendChild(iDiv); 
-            }
-
-            /* add span's choices to question */
-            document.getElementsByClassName('question-body ng-binding ng-isolate-scope')[0].appendChild(span);
-        }
-        else
-        {
-            if( debugtexify === true )
-                ConsolePrint('SAME QUESTION ');
-        }  
-    }
 
     if( debugtexify === true )
-        ConsolePrint('MATHJAX RESCAN ');
-    
-    /* MathJax.Hub.Queue(["Typeset",MathJax.Hub]); : chrome compatible but not for firefox */
-    MathJax.Hub.Typeset();
+        ConsolePrint('MATHJAX SCAN & FONT RESIZE');
+  
+    /* Question Size */
+    SetClassFontSize("slide-body", QUESTION_TEXT_SIZE);
+  
+    /* Choices Size */
+    SetClassFontSize("slide-choices slide-choices--complete", CHOICES_TEXT_SIZE);  
+  
+    /* MathJax rescan */
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 }
 
-/* Intercept CTRL+E for "[; XX ;]" insertion */
+/* Intercept CTRL+E for "[; XX ;]" insertion (Futur use)*/
 
 function keyDownHandler(zEvent) {
     if (zEvent.ctrlKey  &&  zEvent.code === "KeyE") {
